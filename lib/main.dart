@@ -1,19 +1,13 @@
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_application_1/Screens/splashscreen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const LoginScreen(),
-    );
-  }
-}
+void main() => runApp(
+  MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: 'Sarkari Karmachari Hospital',
+    theme: ThemeData(useMaterial3: true, colorSchemeSeed: kBlue),
+    home: const LoginPage(),
+  ),
+);
